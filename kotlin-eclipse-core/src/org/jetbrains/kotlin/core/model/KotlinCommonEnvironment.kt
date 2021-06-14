@@ -119,9 +119,9 @@ abstract class KotlinCommonEnvironment(disposable: Disposable) {
 
         projectEnvironment = object : JavaCoreProjectEnvironment(disposable, kotlinCoreApplicationEnvironment) {
             override fun preregisterServices() {
-                registerProjectExtensionPoints(Extensions.getArea(project))
+                registerProjectExtensionPoints(project.getExtensionArea())
                 CoreApplicationEnvironment.registerExtensionPoint(
-                    Extensions.getArea(project),
+                    project.getExtensionArea(),
                     JvmElementProvider.EP_NAME,
                     JvmElementProvider::class.java
                 )

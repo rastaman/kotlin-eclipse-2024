@@ -11,12 +11,12 @@ val teamcityBaseUrl ="https://teamcity.jetbrains.com"
 val ideaSdkUrl = "https://www.jetbrains.com/intellij-repository/releases/com/jetbrains/intellij/idea"
 
 // properties that might/should be modifiable
-val kotlinCompilerTcBuildId: String = project.findProperty("kotlinCompilerTcBuildId") as String? ?: "3282462"
-val kotlinCompilerVersion: String = project.findProperty("kotlinCompilerVersion") as String? ?: "1.4.0"
+val kotlinCompilerTcBuildId: String = project.findProperty("kotlinCompilerTcBuildId") as String? ?: "3271276" // https://teamcity.jetbrains.com/viewType.html?buildTypeId=Kotlin_KotlinPublic_Aggregate&tab=buildTypeHistoryList&branch_Kotlin_KotlinPublic=__all_branches__
+val kotlinCompilerVersion: String = project.findProperty("kotlinCompilerVersion") as String? ?: "1.4.30"
 val kotlinxVersion: String = project.findProperty("kolinxVersion") as String? ?: "1.3.1"
 val tcArtifactsPath: String = project.findProperty("tcArtifactsPath") as String? ?: ""
-val ideaVersion: String = project.findProperty("ideaVersion") as String? ?: "193.6494.35"
-val kotlinIdeaCompatibleVersionMinor: String = project.findProperty("kotlinIdeaCompatibleVersionMinor") as String? ?: "2019.3"
+val ideaVersion: String = project.findProperty("ideaVersion") as String? ?: "193.7288.26" // Build number for "com.jetbrains.intellij.idea" from https://www.jetbrains.com/intellij-repository/releases
+val kotlinIdeaCompatibleVersionMinor: String = project.findProperty("kotlinIdeaCompatibleVersionMinor") as String? ?: "2020.2"
 val ignoreSources: Boolean = project.hasProperty("ignoreSources")
 
 //directories
