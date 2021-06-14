@@ -168,7 +168,7 @@ abstract class KotlinCommonEnvironment(disposable: Disposable) {
 
             registerService(JavaModuleResolver::class.java, EclipseKotlinJavaModuleResolver())
 
-            val area = Extensions.getArea(this)
+            val area = this.getExtensionArea()
             val javaFileManager = ServiceManager.getService(this, JavaFileManager::class.java)
             (javaFileManager as KotlinCliJavaFileManagerImpl)
                 .initialize(

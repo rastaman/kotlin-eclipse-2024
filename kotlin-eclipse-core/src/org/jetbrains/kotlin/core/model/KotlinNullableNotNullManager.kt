@@ -41,6 +41,9 @@ class KotlinNullableNotNullManager(project: Project) : NullableNotNullManager(pr
         _nullables.addAll(annotations)
     }
 
+    override fun getNullityDefault(container: PsiModifierListOwner, placeTargetTypes: Array<PsiAnnotation.TargetType>,
+        context: PsiModifierListOwner, superPackage: Boolean): NullabilityAnnotationInfo? = null
+
     override fun getDefaultNotNull(): String = "NotNull"
 
     override fun getNotNulls(): List<String> = _notNulls
