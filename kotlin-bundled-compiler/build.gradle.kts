@@ -13,13 +13,15 @@ val ideaSdkUrl = "https://www.jetbrains.com/intellij-repository/releases/com/jet
 // properties that might/should be modifiable
 
 //val kotlinCompilerTcBuildId: String = project.findProperty("kotlinCompilerTcBuildId") as String? ?: "3546752"
-val kotlinPluginUpdateId = project.findProperty("kotlinPluginUpdateId") as String? ?: "169248" // Kotlin Plugin 1.6.21 for Idea 2021.3
+// id from https://plugins.jetbrains.com/plugin/6954-kotlin/versions
+val kotlinPluginUpdateId = project.findProperty("kotlinPluginUpdateId") as String? ?: "193254" // Kotlin Plugin 1.7.10 for Idea 2022.1.4
 
-val kotlinCompilerVersion: String = project.findProperty("kotlinCompilerVersion") as String? ?: "1.6.21"
+val kotlinCompilerVersion: String = project.findProperty("kotlinCompilerVersion") as String? ?: "1.7.10"
 val kotlinxVersion: String = project.findProperty("kolinxVersion") as String? ?: "1.5.2"
 val tcArtifactsPath: String = project.findProperty("tcArtifactsPath") as String? ?: ""
-val ideaVersion: String = project.findProperty("ideaVersion") as String? ?: "213.5744.223" //Idea 2021.3
-val kotlinIdeaCompatibleVersionMinor: String = project.findProperty("kotlinIdeaCompatibleVersionMinor") as String? ?: "2021.3"
+// ideaVersion is a Build from https://www.jetbrains.com/idea/download/other.html
+val ideaVersion: String = project.findProperty("ideaVersion") as String? ?: "221.6008.13" //Idea 2022.1.4
+val kotlinIdeaCompatibleVersionMinor: String = project.findProperty("kotlinIdeaCompatibleVersionMinor") as String? ?: "2022.1"
 val ignoreSources: Boolean = true//project.hasProperty("ignoreSources")
 
 //directories
@@ -53,7 +55,7 @@ val kotlinPluginArtifactsResolver = HttpArtifactsResolver("https://plugins.jetbr
 val tempKotlinHttpArtifact = HttpArtifact("plugin/download?rel=true&updateId=$kotlinPluginUpdateId")
 
 tasks.withType<Wrapper> {
-    gradleVersion = "5.5.1"
+    gradleVersion = "7.5.1"
 }
 
 val testFrameworkDependencies by configurations.creating
@@ -195,27 +197,6 @@ val extractPackagesFromKTCompiler by tasks.registering(Jar::class) {
     }
 }
 
-val downloadIntellijCoreAndExtractSelectedJars by tasks.registering {
-    dependsOn(deleteLibrariesFromLibFolder)
-    val ideaDownloadDir = file("$downloadDir/idea-$ideaVersion")
-    val locallyDownloadedIntellijCoreFile by extra { file("$ideaDownloadDir/intellij-core.zip") }
-
-    doLast {
-        if(!locallyDownloadedIntellijCoreFile.exists()) {
-            ideaArtifactsResolver.downloadTo(ideaArtifactsResolver.INTELLIJ_CORE_ZIP, locallyDownloadedIntellijCoreFile)
-        }
-        copy {
-            from(zipTree(locallyDownloadedIntellijCoreFile))
-
-            setIncludes(setOf("intellij-core.jar"))
-
-            includeEmptyDirs = false
-
-            into(libDir)
-        }
-    }
-}
-
 val downloadIdeaDistributionZipAndExtractSelectedJars by tasks.registering {
     dependsOn(deleteLibrariesFromLibFolder)
     val ideaDownloadDir = file("$downloadDir/idea-$ideaVersion")
@@ -223,10 +204,12 @@ val downloadIdeaDistributionZipAndExtractSelectedJars by tasks.registering {
     val chosenJars by extra { setOf(//"openapi",
             //"platform-util-ui",
             "util",
-            "idea",
+            "app",
+            "util_rt"
             //"trove4j",
-            "platform-api",
-            "platform-impl") }
+            //"platform-api",
+            //"platform-impl"
+            ) }
 
     doLast {
         if(!locallyDownloadedIdeaZipFile.exists()) {
@@ -332,13 +315,11 @@ val downloadBundled by tasks.registering {
     if (localTCArtifacts) {
         dependsOn(extractPackagesFromPlugin,
                 extractPackagesFromKTCompiler,
-                downloadIntellijCoreAndExtractSelectedJars,
                 createIdeDependenciesJar,
                 downloadKotlinxLibraries)
     } else {
         dependsOn(extractPackagesFromPlugin,
                 extractPackagesFromKTCompiler,
-                downloadIntellijCoreAndExtractSelectedJars,
                 createIdeDependenciesJar,
                 downloadKotlinxLibraries)
     }
