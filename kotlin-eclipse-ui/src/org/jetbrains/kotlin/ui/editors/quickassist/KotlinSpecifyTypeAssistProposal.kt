@@ -24,7 +24,8 @@ import org.jetbrains.kotlin.descriptors.CallableDescriptor
 import org.jetbrains.kotlin.idea.util.IdeDescriptorRenderers
 import org.jetbrains.kotlin.psi.*
 import org.jetbrains.kotlin.resolve.BindingContext
-import org.jetbrains.kotlin.types.ErrorUtils
+import org.jetbrains.kotlin.types.error.ErrorTypeKind
+import org.jetbrains.kotlin.types.error.ErrorUtils
 import org.jetbrains.kotlin.types.KotlinType
 import org.jetbrains.kotlin.types.isError
 import org.jetbrains.kotlin.ui.editors.KotlinEditor
@@ -78,11 +79,11 @@ public class KotlinSpecifyTypeAssistProposal(editor: KotlinEditor) : KotlinQuick
     
     private fun getTypeForDeclaration(declaration: KtCallableDeclaration): KotlinType {
         val bindingContext = declaration.getBindingContext()
-        if (bindingContext == null) return ErrorUtils.createErrorType("null type")
+        if (bindingContext == null) return ErrorUtils.createErrorType(ErrorTypeKind.NO_TYPE_SPECIFIED, "null type")
         
         val descriptor = bindingContext[BindingContext.DECLARATION_TO_DESCRIPTOR, declaration]
         val type = (descriptor as? CallableDescriptor)?.getReturnType()
-        return type ?: ErrorUtils.createErrorType("null type")
+        return type ?: ErrorUtils.createErrorType(ErrorTypeKind.NO_TYPE_SPECIFIED, "null type")
     }
 }
 

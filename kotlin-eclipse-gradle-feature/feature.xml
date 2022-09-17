@@ -2,7 +2,7 @@
 <feature
       id="org.jetbrains.kotlin.gradle.feature"
       label="Kotlin-gradle"
-      version="1.6.21.qualifier"
+      version="1.7.10.qualifier"
       provider-name="JetBrains">
 
    <description url="http://kotlinlang.org/">
@@ -10,11 +10,11 @@
    </description>
 
    <copyright url="http://www.jetbrains.com/">
-      Copyright 2010-2016 JetBrains s.r.o.
+      Copyright 2010-2022 JetBrains s.r.o.
    </copyright>
 
    <license url="">
-      Copyright 2010-2016 JetBrains s.r.o.
+      Copyright 2010-2022 JetBrains s.r.o.
 
 Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 you may not use this file except in compliance with the License.
