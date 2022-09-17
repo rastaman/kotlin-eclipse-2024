@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.jetbrains.kotlin.maven;singleton:=true
 Bundle-Version: 1.7.10.qualifier
 Bundle-Activator: org.jetbrains.kotlin.maven.Activator
 Bundle-Vendor: JetBrains
-Require-Bundle: org.eclipse.core.runtime,
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.26.0,3.27.0)",
  org.eclipse.m2e.core,
  org.eclipse.m2e.jdt,
  org.eclipse.m2e.maven.runtime,
