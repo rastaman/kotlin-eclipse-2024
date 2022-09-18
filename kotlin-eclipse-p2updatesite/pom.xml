@@ -15,4 +15,58 @@
 	<version>1.6.21-SNAPSHOT</version>
   <packaging>eclipse-repository</packaging>
 
+
+	<properties>
+		<mirror-repo>${project.build.directory}/mirror-repository</mirror-repo>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>io.github.barrypitman</groupId>
+				<artifactId>s3-storage-wagon</artifactId>
+				<version>2.3.5-SNAPSHOT</version>
+				<executions>
+					<execution>
+						<id>download-actual-repository</id>
+						<phase>install</phase>
+						<goals>
+							<goal>s3-download</goal>
+						</goals>
+						<configuration>
+							<bucket>github.bvfalcon</bucket>
+							<downloadPath>${mirror-repo}</downloadPath>
+							<region>eu-central-1</region>
+							<keys>kotlin-eclipse-repo/</keys>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho.extras</groupId>
+				<artifactId>tycho-p2-extras-plugin</artifactId>
+				<version>${tycho-extras.version}</version>
+				<executions>
+					<execution>
+						<id>update-actual-repositoty-with-new-version</id>
+						<phase>install</phase>
+						<goals>
+							<goal>mirror</goal>
+						</goals>
+						<configuration>
+							<source>
+								<repository>
+									<url>${project.build.directory}/repository</url>
+								</repository>
+							</source>
+							<destination>${mirror-repo}</destination>
+							<append>true</append>
+							<xzCompress>false</xzCompress>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
