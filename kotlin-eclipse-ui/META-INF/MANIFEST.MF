@@ -6,7 +6,7 @@ Bundle-Version: 1.5.31.qualifier
 Bundle-Activator: org.jetbrains.kotlin.ui.Activator
 Bundle-Vendor: JetBrains
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime,
+ org.eclipse.core.runtime;bundle-version="[3.24.100,3.25.0)",
  org.jetbrains.kotlin.core,
  org.eclipse.jface.text,
  org.eclipse.ui.editors;visibility:=reexport,
