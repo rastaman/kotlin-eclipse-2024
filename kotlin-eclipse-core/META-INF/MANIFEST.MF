@@ -6,7 +6,7 @@ Bundle-Version: 1.5.31.qualifier
 Bundle-Activator: org.jetbrains.kotlin.core.Activator
 Bundle-Vendor: JetBrains
 Require-Bundle: org.jetbrains.kotlin.bundled-compiler,
- org.eclipse.core.runtime;bundle-version="[3.24.100,3.25.0)",
+ org.eclipse.core.runtime;bundle-version="[3.19.0,3.25.0)",
  org.eclipse.jdt.core,
  org.eclipse.jdt.launching,
  org.eclipse.debug.core,
@@ -54,4 +54,4 @@ Export-Package: org.jetbrains.kotlin.core,
  org.jetbrains.kotlin.core.resolve.lang.kotlin,
  org.jetbrains.kotlin.core.script,
  org.jetbrains.kotlin.core.utils
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11

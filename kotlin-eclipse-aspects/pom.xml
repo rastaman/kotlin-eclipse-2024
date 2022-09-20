@@ -28,17 +28,16 @@
 			</plugin>
 			<plugin>
 				<!-- compile the aspect files -->
-				<groupId>com.github.m50d</groupId>
+				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>aspectj-maven-plugin</artifactId>
-				<version>1.11.1</version>
+				<version>1.14.0</version>
 				<executions>
 					<execution>
 						<phase>process-sources</phase>
 						<id>compile</id>
 						<configuration>
-							<source>1.8</source>
-							<target>1.8</target>
-							<complianceLevel>1.8</complianceLevel>
+							<release>11</release>
+							<complianceLevel>11</complianceLevel>
 							<aspectDirectory>src</aspectDirectory>
 							<Xlint>ignore</Xlint>
 							<deprecation>true</deprecation>
