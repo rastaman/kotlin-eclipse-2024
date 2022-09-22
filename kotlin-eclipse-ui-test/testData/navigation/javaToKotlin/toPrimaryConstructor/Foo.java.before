@@ -1,7 +1,0 @@
-import pckg.navigation.KotlinConstructors;
-
-public class Foo {
-	public void some() {
-		new KotlinCon<caret>structors();
-	}
-}

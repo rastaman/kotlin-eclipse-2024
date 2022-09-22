@@ -1,7 +1,0 @@
-import pckg.navigation.SomeKotlin;
-
-public class Foo {
-	public void some() {
-		SomeKotlin.Companion.asStat<caret>ic();
-	}
-}

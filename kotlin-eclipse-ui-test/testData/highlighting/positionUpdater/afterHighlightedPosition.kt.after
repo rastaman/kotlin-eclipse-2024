@@ -1,3 +1,0 @@
-fun <pos>fnName</pos>() { println() }
-
-// TYPE: println()

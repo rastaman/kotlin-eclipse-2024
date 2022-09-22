@@ -1,7 +1,0 @@
-import dependencies.div
-
-fun main() {
-	"" / 27
-}
-
-// NUMBER: 1

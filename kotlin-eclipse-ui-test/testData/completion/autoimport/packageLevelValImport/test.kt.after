@@ -1,5 +1,0 @@
-import dependencies.foo
-
-fun main() {
-	foo
-}

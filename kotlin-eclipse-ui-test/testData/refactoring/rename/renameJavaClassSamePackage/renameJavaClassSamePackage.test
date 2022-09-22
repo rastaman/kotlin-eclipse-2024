@@ -1,7 +1,0 @@
-{
-  "type": "JAVA_CLASS",
-  "classId": "testing/SomeClass",
-  "newName": "NewName",
-  "mainFile": "RenameJavaClassSamePackage.kt",
-  "oldName": "SomeClass"
-}

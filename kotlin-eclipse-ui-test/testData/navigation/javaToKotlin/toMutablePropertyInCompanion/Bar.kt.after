@@ -1,7 +1,0 @@
-package pckg.navigation
-
-class SomeKotlin {
-    companion object {
-        var <caret>foo: String = "foo"
-    }
-}

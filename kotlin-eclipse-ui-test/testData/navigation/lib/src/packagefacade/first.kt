@@ -1,3 +1,0 @@
-package packagefacade
-
-fun firstFileFun() {}

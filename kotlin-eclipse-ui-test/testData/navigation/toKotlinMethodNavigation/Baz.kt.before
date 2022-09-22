@@ -1,7 +1,0 @@
-package navigation
-
-public class Baz : Bar()
-
-fun test() {
-	Baz().fo<caret>o()
-}

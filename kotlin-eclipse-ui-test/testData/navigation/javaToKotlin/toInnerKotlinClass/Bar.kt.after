@@ -1,7 +1,0 @@
-package pckg.navigation
-
-class SomeKotlin {
-	fun some() = NestedKotlin()
-	public class <caret>NestedKotlin {
-	}
-}

@@ -1,3 +1,0 @@
-<keyword>interface</keyword> Some {
-	
-}

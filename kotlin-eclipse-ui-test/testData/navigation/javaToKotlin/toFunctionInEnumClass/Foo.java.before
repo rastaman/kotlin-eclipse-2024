@@ -1,7 +1,0 @@
-import pckg.navigation.ForEnum;
-
-public class Foo {
-	public void some() {
-		ForEnum.KotlinEnum.ABC.inEnumE<caret>ntry();
-	}
-}

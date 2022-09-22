@@ -1,3 +1,0 @@
-fun ktTest() {
-    SomeJava.test()
-}

@@ -1,7 +1,0 @@
-package navigation
-
-public class Foo {
-    public int getBar<caret>() {
-       return 10;
-    }
-}

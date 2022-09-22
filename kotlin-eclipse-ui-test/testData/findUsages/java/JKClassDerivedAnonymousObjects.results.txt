@@ -1,2 +1,0 @@
-Unclassified usage 2 public interface T: A
-Unclassified usage 4 val a = object: A() {}

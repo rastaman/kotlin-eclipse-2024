@@ -1,7 +1,0 @@
-{
-  "type": "KOTLIN_CLASS",
-  "classId": "testing/rename/First",
-  "oldName": "First",
-  "mainFile": "Second.kt",
-  "newName": "Third"
-}

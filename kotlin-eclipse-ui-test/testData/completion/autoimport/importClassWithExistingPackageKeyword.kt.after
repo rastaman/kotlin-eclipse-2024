@@ -1,5 +1,0 @@
-package testing
-
-import java.util.Vector
-
-fun test() = Vector

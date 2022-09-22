@@ -1,7 +1,0 @@
-import pckg.navigation.KotlinEnum;
-
-public class Foo {
-	public void some() {
-		KotlinEnum.AB<caret>D;
-	}
-}

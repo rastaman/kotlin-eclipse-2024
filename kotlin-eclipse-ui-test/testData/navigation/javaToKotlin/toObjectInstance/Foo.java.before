@@ -1,7 +1,0 @@
-import pckg.navigation.SomeObject;
-
-public class Foo {
-	public void some() {
-		SomeObject.INSTA<caret>NCE.hashCode();
-	}
-}

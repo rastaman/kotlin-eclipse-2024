@@ -1,3 +1,0 @@
-mai<caret>
-
-// ABSENT: main

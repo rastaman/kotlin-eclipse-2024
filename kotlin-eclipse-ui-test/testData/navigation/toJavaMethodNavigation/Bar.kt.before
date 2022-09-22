@@ -1,7 +1,0 @@
-package navigation
-
-public class Bar : Foo()
-
-fun test() {
-	Bar().metho<caret>d()
-}

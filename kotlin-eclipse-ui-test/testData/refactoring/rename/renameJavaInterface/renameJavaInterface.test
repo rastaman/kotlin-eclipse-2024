@@ -1,8 +1,0 @@
-{
-  "type": "JAVA_CLASS",
-  "classId": "testing/SomeInterface",
-  "newName": "NewInterface",
-  "oldName": "SomeInterface",
-  "comment": "For KT-4100 Imports doesn't change after java interface name refactoring",
-  "mainFile": "RenameJavaClass.kt"
-}

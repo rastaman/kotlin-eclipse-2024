@@ -1,7 +1,0 @@
-import pckg.navigation.BarKt;
-
-public class Foo {
-	public void some() {
-		BarKt.getWithG<caret>etter();
-	}
-}

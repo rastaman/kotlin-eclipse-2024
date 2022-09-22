@@ -1,6 +1,0 @@
-package navigation
-
-fun some() {
-    val foo = Foo()
-    foo.getBa<caret>r()
-}

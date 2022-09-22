@@ -1,3 +1,0 @@
-import testing.Foo
-
-fun test() = Foo

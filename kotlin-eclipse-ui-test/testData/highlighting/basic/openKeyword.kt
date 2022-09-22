@@ -1,1 +1,0 @@
-<keyword>open</keyword> <keyword>class</keyword> Some

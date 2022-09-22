@@ -1,5 +1,0 @@
-<comment>/* test
-
-test
-
-*/</comment>

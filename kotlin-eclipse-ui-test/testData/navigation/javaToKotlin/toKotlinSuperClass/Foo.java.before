@@ -1,7 +1,0 @@
-import pckg.navigation.SomeKotlin;
-
-public class Foo extends SomeKotlin {
-	public Foo() {
-		sup<caret>er();
-	}
-}

@@ -1,3 +1,0 @@
-fun testReturn(): Array<Int> {
-    return listOf(1, 2).toTypedArray()
-}

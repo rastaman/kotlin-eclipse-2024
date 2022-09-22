@@ -1,7 +1,0 @@
-import pckg.navigation
-
-public class Foo {
-	public void some() {
-		new SomeKo<caret>tlin();
-	}
-}

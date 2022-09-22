@@ -1,9 +1,0 @@
-package pckg.navigation
-
-fun <caret>topLevelFun() {
-}
-
-class SomeKotlin {
-	fun topLevelFun() {
-	}
-}

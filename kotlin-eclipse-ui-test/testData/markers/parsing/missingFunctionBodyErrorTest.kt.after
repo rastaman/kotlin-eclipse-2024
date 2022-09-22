@@ -1,5 +1,0 @@
-package parsingMarkers
-
-fun foo() <error>=</error>
-
-class Foo

@@ -1,6 +1,0 @@
-package parsingMarkers
-
-fun foo() {
-}<error>}</error>
-
-// TYPE: }

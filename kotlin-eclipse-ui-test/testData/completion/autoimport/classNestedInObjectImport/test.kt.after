@@ -1,5 +1,0 @@
-import dependencies.Foo.Bar
-
-fun main() {
-    Bar()
-}

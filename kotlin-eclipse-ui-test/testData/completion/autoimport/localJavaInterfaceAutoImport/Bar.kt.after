@@ -1,3 +1,0 @@
-import testing.FooInterface
-
-fun test() = FooInterface

@@ -1,3 +1,0 @@
-import testing.FooEnum
-
-fun test() = FooEnum

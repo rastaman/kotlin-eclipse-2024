@@ -1,7 +1,0 @@
-import dependencies.foo
-
-fun main() {
-    "".foo(27)
-}
-
-// NUMBER: 1

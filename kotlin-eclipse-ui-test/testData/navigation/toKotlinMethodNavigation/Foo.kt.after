@@ -1,7 +1,0 @@
-package navigation
-
-public open class Foo {
-	fun <caret>foo() {
-	
-	}
-}

@@ -1,1 +1,0 @@
-fun test() = FooE<caret>num

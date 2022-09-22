@@ -1,8 +1,0 @@
-package pckg.navigation
-
-class KotlinConstructors {
-	<caret>constructor(x: Int) {
-	}
-	constructor(x: String) {
-	}
-}

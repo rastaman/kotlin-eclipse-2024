@@ -1,6 +1,0 @@
-package temp
-
-fun test(t: BigTest) {
-}
-
-class <caret>BigTest
