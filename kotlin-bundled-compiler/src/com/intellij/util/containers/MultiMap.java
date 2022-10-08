@@ -351,7 +351,7 @@ public class MultiMap<K, V> implements Serializable {
 
   @NotNull
   public static <K, V> MultiMap<K, V> createSet() {
-    return createSet(ContainerUtil.<K>canonicalStrategy());
+    return createSet(TObjectHashingStrategy.CANONICAL);
   }
 
   @NotNull
