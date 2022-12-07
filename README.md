@@ -9,6 +9,7 @@ Update-site URL | Description
 ----------------|------------
 https://s3.eu-central-1.amazonaws.com/github.bvfalcon/kotlin-eclipse-repo/ | **Kotlin for Eclipse 2020-09 and later**
 &nbsp; | &nbsp;
+https://s3.eu-central-1.amazonaws.com/github.bvfalcon/kotlin-eclipse/eclipse-releases/2022-12/ | Last version Kotlin for Eclipse 2022-12
 https://s3.eu-central-1.amazonaws.com/github.bvfalcon/kotlin-eclipse/eclipse-releases/2022-09/ | Last version Kotlin for Eclipse 2022-09
 https://s3.eu-central-1.amazonaws.com/github.bvfalcon/kotlin-eclipse/eclipse-releases/2022-06/ | Last version Kotlin for Eclipse 2022-06
 https://s3.eu-central-1.amazonaws.com/github.bvfalcon/kotlin-eclipse/eclipse-releases/2022-03/ | Last version Kotlin for Eclipse 2022-03
