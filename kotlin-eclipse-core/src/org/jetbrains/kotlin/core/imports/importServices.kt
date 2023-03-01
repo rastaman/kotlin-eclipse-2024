@@ -105,9 +105,9 @@ private fun findApplicableCallables(
     }
 
     return searchCallableByName(element)
-        ?.let { module.accept(visitor, it) }
+        .let { module.accept(visitor, it) }
         ?.map { FunctionCandidate(it) }
-        ?: return emptyList()
+        ?: emptyList()
 }
 
 private fun CallableDescriptor.isReceiverTypeMatching(type: KotlinType): Boolean =
