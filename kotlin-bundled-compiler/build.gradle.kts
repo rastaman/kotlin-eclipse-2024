@@ -201,15 +201,13 @@ val downloadIdeaDistributionZipAndExtractSelectedJars by tasks.registering {
     dependsOn(deleteLibrariesFromLibFolder)
     val ideaDownloadDir = file("$downloadDir/idea-$ideaVersion")
     val locallyDownloadedIdeaZipFile by extra { file("$ideaDownloadDir/ideaIC.zip") }
-    val chosenJars by extra { setOf(//"openapi",
-            //"platform-util-ui",
+    val chosenJars by extra { setOf(
             "util",
-            "app",
-            "util_rt"
-            //"trove4j",
-            //"platform-api",
-            //"platform-impl"
-            ) }
+            "util_rt",
+            "idea_rt",
+            "app"
+        )
+    }
 
     doLast {
         if(!locallyDownloadedIdeaZipFile.exists()) {
@@ -311,7 +309,6 @@ val repackageIdeaAndKotlinCompilerSources by tasks.registering(Zip::class) {
 }
 
 val downloadBundled by tasks.registering {
-    libDir.listFiles()?.filter { it.isFile }?.forEach { it.deleteRecursively() }
     if (localTCArtifacts) {
         dependsOn(extractPackagesFromPlugin,
                 extractPackagesFromKTCompiler,
