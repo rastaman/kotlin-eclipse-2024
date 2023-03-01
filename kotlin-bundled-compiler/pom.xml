@@ -8,7 +8,7 @@
 		<relativePath>../pom.xml</relativePath>
 		<groupId>kotlin.eclipse</groupId>
 		<artifactId>kotlin.eclipse.plugin</artifactId>
-		<version>1.7.10-SNAPSHOT</version>
+		<version>1.8.10-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>org.jetbrains.kotlin.bundled-compiler</artifactId>
@@ -38,7 +38,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.10.1</version>
+				<version>3.11.0</version>
 				<configuration>
 					<release>17</release>
 				</configuration>

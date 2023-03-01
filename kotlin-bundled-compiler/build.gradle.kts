@@ -14,14 +14,14 @@ val ideaSdkUrl = "https://www.jetbrains.com/intellij-repository/releases/com/jet
 
 //val kotlinCompilerTcBuildId: String = project.findProperty("kotlinCompilerTcBuildId") as String? ?: "3546752"
 // id from https://plugins.jetbrains.com/plugin/6954-kotlin/versions
-val kotlinPluginUpdateId = project.findProperty("kotlinPluginUpdateId") as String? ?: "193254" // Kotlin Plugin 1.7.10 for Idea 2022.1.4
+val kotlinPluginUpdateId = project.findProperty("kotlinPluginUpdateId") as String? ?: "286278" // Kotlin Plugin 1.8.10 for Idea 2022.2.4
 
-val kotlinCompilerVersion: String = project.findProperty("kotlinCompilerVersion") as String? ?: "1.7.10"
-val kotlinxVersion: String = project.findProperty("kolinxVersion") as String? ?: "1.5.2"
+val kotlinCompilerVersion: String = project.findProperty("kotlinCompilerVersion") as String? ?: "1.8.10"
+val kotlinxVersion: String = project.findProperty("kolinxVersion") as String? ?: "1.6.4"
 val tcArtifactsPath: String = project.findProperty("tcArtifactsPath") as String? ?: ""
 // ideaVersion is a Build from https://www.jetbrains.com/idea/download/other.html
-val ideaVersion: String = project.findProperty("ideaVersion") as String? ?: "221.6008.13" //Idea 2022.1.4
-val kotlinIdeaCompatibleVersionMinor: String = project.findProperty("kotlinIdeaCompatibleVersionMinor") as String? ?: "2022.1"
+val ideaVersion: String = project.findProperty("ideaVersion") as String? ?: "222.4459.24" //Idea 2022.2.4
+val kotlinIdeaCompatibleVersionMinor: String = project.findProperty("kotlinIdeaCompatibleVersionMinor") as String? ?: "2022.2"
 val ignoreSources: Boolean = true//project.hasProperty("ignoreSources")
 
 //directories
