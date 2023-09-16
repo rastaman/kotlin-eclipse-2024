@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.jetbrains.kotlin.aspects
 Bundle-Version: 1.8.10.qualifier
 Bundle-Activator: org.jetbrains.kotlin.aspects.Activator
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime;bundle-version="[3.27.0,3.30.0)",
+ org.eclipse.core.runtime;bundle-version="[3.27.0,4.0.0)",
  org.aspectj.runtime,
  org.jetbrains.kotlin.core,
  org.eclipse.jdt.ui,
