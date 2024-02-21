@@ -169,6 +169,7 @@ val downloadKotlinCompilerPluginAndExtractSelectedJars by tasks.registering {
 
 val extractPackagesFromPlugin by tasks.registering(Jar::class) {
     dependsOn(downloadKotlinCompilerPluginAndExtractSelectedJars)
+    dependsOn(downloadKotlinxLibraries)
 
     from(zipTree("$libDir/kotlin-plugin.jar"))
     destinationDirectory.set(libDir)
@@ -183,6 +184,7 @@ val extractPackagesFromPlugin by tasks.registering(Jar::class) {
 
 val extractPackagesFromKTCompiler by tasks.registering(Jar::class) {
     dependsOn(downloadKotlinCompilerPluginAndExtractSelectedJars)
+    dependsOn(downloadKotlinxLibraries)
 
     from(zipTree("$libDir/kotlin-compiler.jar"))
     destinationDirectory.set(libDir)
@@ -255,6 +257,7 @@ val extractSelectedFilesFromIdeaJars by tasks.registering {
 
 val createIdeDependenciesJar by tasks.registering(Jar::class) {
     dependsOn(extractSelectedFilesFromIdeaJars)
+    dependsOn(downloadKotlinxLibraries)
 
     val extractDir: File by extractSelectedFilesFromIdeaJars.get().extra
 
@@ -275,6 +278,7 @@ val createIdeDependenciesJar by tasks.registering(Jar::class) {
 }
 
 val downloadKotlinxLibraries by tasks.registering(Copy::class) {
+    mustRunAfter(deleteLibrariesFromLibFolder)
     from(kotlinxLibraries)
     into(libDir)
     rename("(kotlinx-coroutines-\\w+)-.*", "$1.jar")
