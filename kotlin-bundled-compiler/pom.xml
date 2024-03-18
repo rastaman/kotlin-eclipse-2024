@@ -8,7 +8,7 @@
 		<relativePath>../pom.xml</relativePath>
 		<groupId>kotlin.eclipse</groupId>
 		<artifactId>kotlin.eclipse.plugin</artifactId>
-		<version>1.8.10-SNAPSHOT</version>
+		<version>1.9.23-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>org.jetbrains.kotlin.bundled-compiler</artifactId>
@@ -23,7 +23,7 @@
 				<artifactId>kotlin-maven-plugin</artifactId>
 				<version>${kotlin.version}</version>
 				<configuration>
-					<jvmTarget>17</jvmTarget>
+					<jvmTarget>21</jvmTarget>
 				</configuration>
 				<executions>
 					<execution>
@@ -40,7 +40,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.11.0</version>
 				<configuration>
-					<release>17</release>
+					<release>21</release>
 				</configuration>
 			</plugin>
 		</plugins>

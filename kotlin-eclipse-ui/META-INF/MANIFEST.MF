@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: kotlin-eclipse-ui
 Bundle-SymbolicName: org.jetbrains.kotlin.ui;singleton:=true
-Bundle-Version: 1.8.10.qualifier
+Bundle-Version: 1.9.23.qualifier
 Bundle-Activator: org.jetbrains.kotlin.ui.Activator
 Bundle-Vendor: JetBrains
 Require-Bundle: org.eclipse.ui,
@@ -58,7 +58,7 @@ Import-Package: com.google.common.collect,
  org.eclipse.ui.views.contentoutline,
  org.eclipse.ui.wizards.newresource,
  org.jetbrains.kotlin.idea.util
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: org.jetbrains.kotlin.eclipse.ui.utils,
  org.jetbrains.kotlin.ui,
  org.jetbrains.kotlin.ui.builder,
